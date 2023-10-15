@@ -1,5 +1,6 @@
 import { Seller } from "../src/4.seller";
 import { Employee, Manager } from "../src/5.employee";
+import { sayHello } from '../src/1.say-hello';
 
 describe("Interface", () => {
     it("should support in typescript", () => {
@@ -75,6 +76,46 @@ describe("Interface", () => {
             numberOfEmployees: 10
         }
         console.log(manager);
+
+    })
+
+    it("should support function in interface", () => {
+
+        interface Person {
+            name: string;
+            sayHello(name: string): string;
+        }
+
+        const person: Person = {
+            name: "Eko",
+            sayHello(name: string): string {
+                return `Hello ${name}, my name is ${this.name}`;
+            }
+        }
+
+        console.log(person.sayHello("Al Riansyah"));
+
+
+    });
+
+    it("should support intersection types", () => {
+
+        interface HasName {
+            name: string;
+        }
+
+        interface HasId {
+            id: string;
+        }
+
+        type Domain = HasName & HasId;
+
+        const domain: Domain = {
+            id: "1",
+            name: "Eko"
+        }
+
+        console.log(domain);
 
     })
 })
