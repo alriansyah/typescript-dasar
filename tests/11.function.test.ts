@@ -68,5 +68,18 @@ describe("Function", () => {
 
         expect(callMe(10)).toBe(100);
         expect(callMe("Eko")).toBe("EKO");
+    });
+
+    it("should support function as parameter", () => {
+
+        function sayHello(name: string, callback: (name: string) => string) {
+            return `Hello ${callback(name)}`;
+        }
+
+        function toUpper(name: string): string {
+            return name.toUpperCase();
+        }
+
+        expect(sayHello("Eko", toUpper)).toBe("Hello EKO");
     })
-})
+});
