@@ -1,7 +1,7 @@
 describe("Object", () => {
     it("should support in typesript", () => {
 
-        const person :{id: string, name: string} = {
+        const person :{id: string, name: string, hobbies?: string[]} = {
             id: "1",
             name: "Eko"
         }
