@@ -19,4 +19,13 @@ describe("Array", () => {
         // hobies[0] = "Coding";
 
     });
+
+    it("should support tuple", () => {
+        
+        const person: readonly [string, string, number] = ["Eko", "Kurniawan", 20];
+        console.log(person);
+        console.log(person[0]);
+        console.log(person[1]);
+
+    });
 });
