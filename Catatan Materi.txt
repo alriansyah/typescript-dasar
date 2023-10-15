@@ -1,0 +1,3 @@
+Tipe Data Primitif :
+● TypeScript menggunakan tipe data di JavaScript, sehingga semua tipe data seperti string, number, 
+boolean otomatis didukung oleh TypeScript
