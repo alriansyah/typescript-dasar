@@ -81,5 +81,12 @@ describe("Function", () => {
         }
 
         expect(sayHello("Eko", toUpper)).toBe("Hello EKO");
+
+        expect(sayHello("Eko", function (name: string): string {
+            return name.toUpperCase();
+        })).toBe("Hello EKO");
+
+        expect(sayHello("Eko", (name: string): string => name.toUpperCase()))
+            .toBe("Hello EKO");
     })
 });
