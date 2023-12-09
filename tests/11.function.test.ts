@@ -82,10 +82,12 @@ describe("Function", () => {
 
         expect(sayHello("Eko", toUpper)).toBe("Hello EKO");
 
+        // With Anonymous Function
         expect(sayHello("Eko", function (name: string): string {
             return name.toUpperCase();
         })).toBe("Hello EKO");
 
+        // With Arrow Function
         expect(sayHello("Eko", (name: string): string => name.toUpperCase()))
             .toBe("Hello EKO");
     })
