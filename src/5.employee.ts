@@ -1,3 +1,5 @@
+// Extending Interface
+
 export interface Employee {
     id: string;
     name: string;
