@@ -104,6 +104,12 @@ describe("Interface", () => {
             id: string;
         }
 
+        // With Extends
+        interface Combine extends HasName, HasId {
+            
+        }
+
+        // Intersection
         type Domain = HasName & HasId;
 
         const domain: Domain = {
